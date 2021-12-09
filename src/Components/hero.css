@@ -1,0 +1,23 @@
+#hero-container {
+  height: 80vh;
+  display: flex;
+  color: blue;
+}
+#hero-container > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+#hero-tag,
+#hero-heading {
+  margin-bottom: 2.5rem;
+}
+#hero-tag {
+  width: max-content + 10px;
+  font-size: 1.1em;
+  background-color: tomato;
+}
+#hero-heading {
+  font-size: 3.5rem;
+}

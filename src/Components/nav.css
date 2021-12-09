@@ -1,0 +1,29 @@
+li {
+  list-style: none;
+}
+
+#nav-container,
+#nav-links,
+#nav-contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#nav-container {
+  margin-top: 50px;
+}
+#nav-contact {
+  margin-left: auto;
+}
+
+#logo {
+  margin-right: 200px;
+  font-size: 1.3rem;
+}
+#logo span {
+  font-weight: 500;
+}
+#nav-links *,
+#nav-contact * {
+  margin-left: 25px;
+}
