@@ -1,0 +1,86 @@
+@import "Util";
+
+#work-container {
+  padding: 50px 15vw 0 15vw;
+  background-color: $primary;
+}
+.text-first {
+  display: grid;
+  grid-template-columns: 35% minmax(50px, calc(65% - 480px)) 480px;
+}
+.design-first {
+  display: grid;
+  grid-template-columns: 480px minmax(50px, calc(65% - 480px)) 35%;
+}
+.work {
+  padding-top: 60px;
+  h1 {
+    font-weight: 200;
+    font-size: 2rem;
+    letter-spacing: 0.125rem;
+    margin-right: auto;
+  }
+  // border: 2px solid yellow;
+  #right {
+    // border: 2px solid red;
+    position: relative;
+    #card {
+      overflow: hidden;
+      position: relative;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 #25262aa6;
+      backdrop-filter: blur(3px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      z-index: 10;
+      #card-info {
+        margin: 2rem;
+        display: flex;
+        align-items: center;
+        p {
+          padding: 0 8px;
+          border-radius: 3px;
+          font-weight: lighter;
+          margin-left: 0.5rem;
+          background-color: $primary;
+        }
+      }
+      img {
+        position: relative;
+        left: 40px;
+        display: block;
+        height: 350px;
+        border-radius: 10px;
+      }
+    }
+    //TODO--------Style objects for blur effect
+    #one,
+    #two {
+      background-image: url("../../img/doodle1.png");
+      background-position: center;
+      background-size: contain;
+      height: 150px;
+      width: 150px;
+      position: absolute;
+    }
+    #one {
+      transform: rotate(90deg);
+      top: -100px;
+    }
+    #two {
+      top: 380px;
+      left: -20px;
+    }
+  }
+  #left {
+    #btn-demo {
+      @include btnBordered;
+    }
+    #btn-git {
+      @include btnUnderlined;
+    }
+    p {
+      padding: 50px 0 30px 0;
+    }
+  }
+}

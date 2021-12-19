@@ -1,0 +1,37 @@
+li {
+  list-style: none;
+}
+
+#nav-container,
+#nav-links,
+#nav-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#nav-contact {
+  margin-left: auto;
+}
+
+#logo {
+  margin-right: 15vw;
+  font-size: 1.3rem;
+}
+
+#logo span {
+  font-weight: 600;
+}
+
+#nav-links *,
+#nav-contact * {
+  margin-left: 2.3vw;
+}
+/*# sourceMappingURL=nav.css.map */

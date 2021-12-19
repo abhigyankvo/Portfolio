@@ -1,5 +1,5 @@
-import "./nav.css";
-import "./index.css";
+import "./sass/nav.css";
+import "./sass/index.css";
 import { ReactComponent as Mail } from "../svg/mail.svg";
 import { ReactComponent as Linkedin } from "../svg/linkedin.svg";
 import { ReactComponent as Github } from "../svg/github.svg";

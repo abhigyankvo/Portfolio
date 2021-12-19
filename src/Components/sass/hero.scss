@@ -1,0 +1,51 @@
+@import "Util";
+#hero-container {
+  height: 80vh;
+  display: flex;
+  color: blue;
+
+  > * {
+    @include fl-center;
+    flex: 1;
+  }
+  // #hero-left,
+  // #hero-right {
+  //   // border: 0.1875rem solid blue;
+  // }
+  #hero-left > div {
+    #hero-tag {
+      margin-bottom: 40px;
+      padding: 0 12.8px 0 12.8px;
+      width: max-content;
+      font-size: 1.1em;
+      font-weight: 350;
+      background-color: $accent;
+      color: $primary;
+      border-radius: 3.008px;
+    }
+    #hero-heading {
+      font-size: 56px;
+      margin-bottom: 112px;
+      span {
+        color: $accent;
+      }
+    }
+    #btn-works {
+      @include btnBordered;
+    }
+    #btn-resume {
+      @include btnUnderlined;
+    }
+  }
+  // #hero-svg {
+  //   border: 0.125rem solid green;
+  //   width: 50rem;
+  //   height: 50rem;
+  // }
+
+  #hero-right {
+    background-image: url("../../svg/Sample_13.svg");
+    background-size: 190% 190%;
+    background-position: center;
+  }
+}

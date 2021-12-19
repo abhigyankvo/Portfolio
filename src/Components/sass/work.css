@@ -1,0 +1,119 @@
+#work-container {
+  padding: 50px 15vw 0 15vw;
+  background-color: #2d2e32;
+}
+
+.text-first {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35% minmax(50px, calc(65% - 480px)) 480px;
+      grid-template-columns: 35% minmax(50px, calc(65% - 480px)) 480px;
+}
+
+.design-first {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 480px minmax(50px, calc(65% - 480px)) 35%;
+      grid-template-columns: 480px minmax(50px, calc(65% - 480px)) 35%;
+}
+
+.work {
+  padding-top: 60px;
+}
+
+.work h1 {
+  font-weight: 200;
+  font-size: 2rem;
+  letter-spacing: 0.125rem;
+  margin-right: auto;
+}
+
+.work #right {
+  position: relative;
+}
+
+.work #right #card {
+  overflow: hidden;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0 8px 32px 0 #25262aa6;
+          box-shadow: 0 8px 32px 0 #25262aa6;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 10;
+}
+
+.work #right #card #card-info {
+  margin: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.work #right #card #card-info p {
+  padding: 0 8px;
+  border-radius: 3px;
+  font-weight: lighter;
+  margin-left: 0.5rem;
+  background-color: #2d2e32;
+}
+
+.work #right #card img {
+  position: relative;
+  left: 40px;
+  display: block;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.work #right #one,
+.work #right #two {
+  background-image: url("../../img/doodle1.png");
+  background-position: center;
+  background-size: contain;
+  height: 150px;
+  width: 150px;
+  position: absolute;
+}
+
+.work #right #one {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: -100px;
+}
+
+.work #right #two {
+  top: 380px;
+  left: -20px;
+}
+
+.work #left #btn-demo {
+  font-size: 19.2px;
+  background-color: transparent;
+  /* Green */
+  border: 0.125rem solid #64f4ac;
+  color: #64f4ac;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.3125rem;
+  outline: none;
+}
+
+.work #left #btn-git {
+  margin-left: 2.5rem;
+  font-size: 19.2px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 0.125rem solid #64f4ac;
+  color: #64f4ac;
+}
+
+.work #left p {
+  padding: 50px 0 30px 0;
+}
+/*# sourceMappingURL=work.css.map */

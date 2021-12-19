@@ -1,0 +1,27 @@
+$accent: #64f4ac;
+$primary: #2d2e32;
+$primary-dark: #25262a;
+
+@mixin fl-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin btnBordered {
+  font-size: 19.2px;
+  background-color: transparent; /* Green */
+  border: 0.125rem solid $accent;
+  color: $accent;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.3125rem;
+  outline: none;
+}
+@mixin btnUnderlined {
+  margin-left: 2.5rem;
+  font-size: 19.2px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 0.125rem solid $accent;
+  color: $accent;
+}

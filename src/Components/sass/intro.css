@@ -1,0 +1,21 @@
+#intro-container {
+  height: 500px;
+  background-color: #25262a;
+  padding: 50px 10vw 0 10vw;
+  text-align: center;
+}
+
+#intro-container #intro-content {
+  font-weight: lighter;
+  margin: 30px auto 0 auto;
+  width: 50vw;
+}
+
+#intro-container #intro-title {
+  display: inline;
+  margin-left: 50vw;
+  font-size: 5rem;
+  font-weight: 600;
+  opacity: 0.05;
+}
+/*# sourceMappingURL=intro.css.map */
