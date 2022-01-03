@@ -1,86 +1,238 @@
 @import "Util";
+// todo
+// make button for mobile
+// queris for tab size
 
-#work-container {
-  padding: 50px 15vw 0 15vw;
+#work-container-wrapper {
+  padding: 10vh 10vw;
   background-color: $primary;
+  @media (max-width: 768px) {
+    padding: 5vh 0;
+  }
 }
-.text-first {
+#work-container {
+  background-color: $primary-dark;
+  width: max-content;
+  min-height: 25vw;
+  padding: 3rem;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 768px) {
+    margin: 30px auto;
+    padding: 1.5rem;
+  }
+}
+#work {
+  // > * {
+  //   border: 2px solid red;
+  // }
+  // border: 2px solid red;
+  width: 60vw;
   display: grid;
-  grid-template-columns: 35% minmax(50px, calc(65% - 480px)) 480px;
-}
-.design-first {
-  display: grid;
-  grid-template-columns: 480px minmax(50px, calc(65% - 480px)) 35%;
-}
-.work {
-  padding-top: 60px;
+  grid-template-columns: 1fr 24vw;
+  grid-template-rows: 5vw 12vw 3vw;
+  column-gap: 8%;
+  grid-template-areas:
+    "alpha beta"
+    "gamma beta"
+    "delta beta";
+
   h1 {
-    font-weight: 200;
-    font-size: 2rem;
-    letter-spacing: 0.125rem;
-    margin-right: auto;
+    @include h2Big;
   }
-  // border: 2px solid yellow;
-  #right {
-    // border: 2px solid red;
-    position: relative;
-    #card {
-      overflow: hidden;
-      position: relative;
-      background: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 8px 32px 0 #25262aa6;
-      backdrop-filter: blur(3px);
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      z-index: 10;
-      #card-info {
-        margin: 2rem;
-        display: flex;
-        align-items: center;
-        p {
-          padding: 0 8px;
-          border-radius: 3px;
-          font-weight: lighter;
-          margin-left: 0.5rem;
-          background-color: $primary;
-        }
-      }
-      img {
-        position: relative;
-        left: 40px;
-        display: block;
-        height: 350px;
-        border-radius: 10px;
-      }
-    }
-    //TODO--------Style objects for blur effect
-    #one,
-    #two {
-      background-image: url("../../img/doodle1.png");
-      background-position: center;
-      background-size: contain;
-      height: 150px;
-      width: 150px;
-      position: absolute;
-    }
-    #one {
-      transform: rotate(90deg);
-      top: -100px;
-    }
-    #two {
-      top: 380px;
-      left: -20px;
+  p {
+    @include pBig;
+  }
+  button {
+    margin-right: 2%;
+    @include btnPill;
+    &:hover {
+      @include btnPillHover;
     }
   }
-  #left {
-    #btn-demo {
-      @include btnBordered;
+
+  @media (max-width: 768px) {
+    #work-heading {
+      display: none;
     }
-    #btn-git {
-      @include btnUnderlined;
+    width: 60vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60vw auto auto;
+    // row-gap: 2%;
+    grid-template-areas:
+      "beta"
+      "gamma"
+      "delta";
+    h1 {
+      @include h2Small;
     }
     p {
-      padding: 50px 0 30px 0;
+      @include pSmall;
+    }
+    > * {
+      margin: 5px 0;
     }
   }
 }
+#work-heading {
+  grid-area: alpha;
+}
+#card {
+  grid-area: beta;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 #25262aa6;
+  backdrop-filter: blur(3px);
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  #card-details {
+    height: 18%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    h1 {
+      margin-right: auto;
+    }
+    p {
+      @include pSmall;
+      margin-right: 2%;
+    }
+    @media (max-width: 768px) {
+      padding: 0.5rem;
+      h1 {
+        @include h2Small;
+      }
+      p {
+        @include pSmall;
+      }
+    }
+  }
+  #card-image {
+    background-image: url("../../img/card-image2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 82%;
+  }
+}
+#work-summary {
+  grid-area: gamma;
+  overflow: hidden;
+  @media (max-width: 768px) {
+    align-self: center;
+  }
+}
+#work-btn {
+  grid-area: delta;
+}
+
+// #work {
+//   background-color: #5012ad;
+//   margin: 0 auto;
+//   width: 60vw;
+//   height: 28vw;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   column-gap: 2vw;
+//   > * {
+//     flex: 1;
+//   }
+
+//   @media (max-width: 768px) {
+//     height: 100vw;
+//     width: 70vw;
+//     flex-direction: column;
+//   }
+//   #left {
+//     border: 2px solid red;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     h1 {
+//       @include h1Big;
+//     }
+//     p,
+//     li {
+//       @include pBig;
+//     }
+//     > * {
+//       margin: 2%;
+//     }
+//     button {
+//       @include btnPill;
+//       margin-right: 3%;
+//       &:hover {
+//         @include btnPillHover;
+//       }
+//     }
+
+//     @media (max-width: 768px) {
+//       justify-content: flex-start;
+//       order: 2;
+//       h1 {
+//         @include h1Small;
+//       }
+//       p {
+//         @include pSmall;
+//       }
+//       #btn {
+//         display: flex;
+//         justify-content: center;
+//       }
+//       > * {
+//         margin-top: 3%;
+//       }
+//     }
+//   }
+//   #right {
+//     // border: 2px solid red;
+
+//     #card {
+//       @media (max-width: 768px) {
+//         height: 70vw;
+//       }
+//       height: 100%;
+//       overflow: hidden;
+//       background: rgba(255, 255, 255, 0.1);
+//       box-shadow: 0 8px 32px 0 #25262aa6;
+//       backdrop-filter: blur(3px);
+//       border-radius: 5px;
+//       border: 1px solid rgba(255, 255, 255, 0.18);
+//       #card-details {
+//         height: 18%;
+//         padding: 1rem;
+//         display: flex;
+//         align-items: center;
+//         h1 {
+//           @include h1Big;
+//           margin-right: auto;
+//         }
+//         p {
+//           @include pBig;
+//           margin-right: 2%;
+//         }
+//         @media (max-width: 768px) {
+//           h1 {
+//             @include h1Small;
+//           }
+//           p {
+//             @include pSmall;
+//           }
+//         }
+//       }
+//       #card-image {
+//         position: relative;
+//         left: 1rem;
+//         height: 82%;
+//         width: 100%;
+//         background-image: url("../../img/card-image2.jpg");
+//         background-size: cover;
+//         background-position: center;
+//         background-repeat: no-repeat;
+//         border-radius: 5px;
+//       }
+//     }
+//   }
+// }

@@ -1,5 +1,6 @@
 import "./sass/hero.css";
-export function Hero() {
+import { Nav } from "./Nav";
+function Hero() {
   return (
     <div id="hero-container">
       <div id="hero-left">
@@ -13,6 +14,14 @@ export function Hero() {
         </div>
       </div>
       <div id="hero-right"></div>
+    </div>
+  );
+}
+export function HeroComp() {
+  return (
+    <div id="hero-comp">
+      <Nav />
+      <Hero />
     </div>
   );
 }

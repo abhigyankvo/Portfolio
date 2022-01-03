@@ -1,62 +1,109 @@
+#hero-comp {
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../../img/BackgroundMountain.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../img/BackgroundMountain.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5vh 10vw 0 10vw;
+}
+
 #hero-container {
-  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: blue;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: calc(100% - 1.3rem - 5vh);
 }
 
 #hero-container > * {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+@media (max-width: 768px) {
+  #hero-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#hero-container #hero-left {
+  -ms-flex-item-align: center;
+      align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 
 #hero-container #hero-left > div #hero-tag {
-  margin-bottom: 40px;
-  padding: 0 12.8px 0 12.8px;
+  padding: 0 2% 0 2%;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-size: 1.1em;
-  font-weight: 350;
+  font-size: 0.8rem;
+  font-weight: 400;
   background-color: #64f4ac;
   color: #2d2e32;
-  border-radius: 3.008px;
+  border-radius: 0.1875rem;
+}
+
+@media (max-width: 768px) {
+  #hero-container #hero-left > div #hero-tag {
+    margin-bottom: 1rem;
+  }
 }
 
 #hero-container #hero-left > div #hero-heading {
-  font-size: 56px;
-  margin-bottom: 112px;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
 #hero-container #hero-left > div #hero-heading span {
   color: #64f4ac;
 }
 
+@media (max-width: 768px) {
+  #hero-container #hero-left > div #hero-heading {
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+}
+
 #hero-container #hero-left > div #btn-works {
-  font-size: 19.2px;
-  background-color: transparent;
-  /* Green */
-  border: 0.125rem solid #64f4ac;
+  letter-spacing: 1px;
   color: #64f4ac;
-  padding: 0.625rem 1.25rem;
-  border-radius: 0.3125rem;
   outline: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #64f4ac;
+  background-color: transparent;
+  border-radius: 2rem;
+}
+
+#hero-container #hero-left > div #btn-works:hover {
+  background-color: #64f4ac;
+  color: #25262a;
+  cursor: pointer;
 }
 
 #hero-container #hero-left > div #btn-resume {
   margin-left: 2.5rem;
-  font-size: 19.2px;
+  font-size: 1.1rem;
   background-color: transparent;
   outline: none;
   border: none;
@@ -65,8 +112,15 @@
 }
 
 #hero-container #hero-right {
-  background-image: url("../../svg/Sample_13.svg");
-  background-size: 190% 190%;
+  background-image: url("../../img/HeroImage3.png");
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  #hero-container #hero-right {
+    background-image: url("../../img/HeroImage4.png");
+  }
 }
 /*# sourceMappingURL=hero.css.map */

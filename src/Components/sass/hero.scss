@@ -1,51 +1,74 @@
 @import "Util";
+#hero-comp {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../img/BackgroundMountain.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5vh 10vw 0 10vw;
+}
 #hero-container {
-  height: 80vh;
   display: flex;
-  color: blue;
-
+  flex-direction: row;
+  height: calc(100% - 1.3rem - 5vh);
   > * {
-    @include fl-center;
-    flex: 1;
+    flex-basis: 100%;
+    // border: 2px solid red;
   }
-  // #hero-left,
-  // #hero-right {
-  //   // border: 0.1875rem solid blue;
-  // }
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  #hero-left {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   #hero-left > div {
+    // border: 2px solid red;
     #hero-tag {
-      margin-bottom: 40px;
-      padding: 0 12.8px 0 12.8px;
+      padding: 0 2% 0 2%;
       width: max-content;
-      font-size: 1.1em;
-      font-weight: 350;
+      font-size: 0.8rem;
+      font-weight: 400;
       background-color: $accent;
       color: $primary;
-      border-radius: 3.008px;
+      border-radius: 0.1875rem;
+      @media (max-width: 768px) {
+        margin-bottom: 1rem;
+      }
     }
     #hero-heading {
-      font-size: 56px;
-      margin-bottom: 112px;
+      font-size: 4rem;
+      font-weight: 400;
+      letter-spacing: 2px;
       span {
         color: $accent;
       }
+      @media (max-width: 768px) {
+        @include h1Small;
+        margin-bottom: 1rem;
+      }
     }
     #btn-works {
-      @include btnBordered;
+      @include btnPill;
+      &:hover {
+        @include btnPillHover;
+      }
     }
     #btn-resume {
       @include btnUnderlined;
     }
   }
-  // #hero-svg {
-  //   border: 0.125rem solid green;
-  //   width: 50rem;
-  //   height: 50rem;
-  // }
 
   #hero-right {
-    background-image: url("../../svg/Sample_13.svg");
-    background-size: 190% 190%;
+    background-image: url("../../img/HeroImage3.png");
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
+    @media (max-width: 768px) {
+      background-image: url("../../img/HeroImage4.png");
+    }
   }
 }

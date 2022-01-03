@@ -1,21 +1,67 @@
 #intro-container {
-  height: 500px;
+  min-height: 60vh;
   background-color: #25262a;
-  padding: 50px 10vw 0 10vw;
+  padding: 0 10vw;
   text-align: center;
+  position: relative;
 }
 
-#intro-container #intro-content {
-  font-weight: lighter;
-  margin: 30px auto 0 auto;
-  width: 50vw;
+#intro-container > div {
+  min-height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #intro-container #intro-title {
-  display: inline;
-  margin-left: 50vw;
+  letter-spacing: 2px;
   font-size: 5rem;
   font-weight: 600;
   opacity: 0.05;
+  position: absolute;
+  left: 60%;
+  top: 10%;
+}
+
+@media (max-width: 768px) {
+  #intro-container #intro-title {
+    letter-spacing: 1px;
+    font-size: 3rem;
+    font-weight: 600;
+    opacity: 0.05;
+    left: 50%;
+    top: 2%;
+  }
+}
+
+#intro-container #intro-heading {
+  margin-bottom: 2rem;
+}
+
+#intro-container #intro-content {
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-weight: 200;
+  font-weight: lighter;
+  width: 60vw;
+}
+
+@media (max-width: 768px) {
+  #intro-container #intro-content {
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    font-weight: 200;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=intro.css.map */

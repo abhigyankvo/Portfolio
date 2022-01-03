@@ -1,24 +1,83 @@
 $accent: #64f4ac;
 $primary: #2d2e32;
 $primary-dark: #25262a;
+// $accent: #ffaf01;
+// $primary: #2d2e32;
+// $primary-dark: #25262a;
+@mixin h1Big {
+  letter-spacing: 2px;
+  font-size: 2rem;
+  font-weight: 400;
+}
+@mixin h2Big {
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+@mixin pBig {
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-weight: 200;
+}
 
+@mixin h1Small {
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+@mixin h2Small {
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+@mixin pSmall {
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+@mixin titleBig {
+  letter-spacing: 2px;
+  font-size: 5rem;
+  font-weight: 600;
+  opacity: 0.05;
+}
+@mixin titleSmall {
+  letter-spacing: 1px;
+  font-size: 3rem;
+  font-weight: 600;
+  opacity: 0.05;
+}
 @mixin fl-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-@mixin btnBordered {
-  font-size: 19.2px;
+@mixin btnBordered($pad-x, $pad-y, $font) {
+  font-size: $font;
   background-color: transparent; /* Green */
   border: 0.125rem solid $accent;
   color: $accent;
-  padding: 0.625rem 1.25rem;
+  padding: $pad-x $pad-y;
   border-radius: 0.3125rem;
   outline: none;
 }
+@mixin btnPill {
+  letter-spacing: 1px;
+  color: $accent;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid $accent;
+  background-color: transparent;
+  border-radius: 2rem;
+}
+@mixin btnPillHover {
+  background-color: $accent;
+  color: $primary-dark;
+  cursor: pointer;
+}
 @mixin btnUnderlined {
   margin-left: 2.5rem;
-  font-size: 19.2px;
+  font-size: 1.1rem;
   background-color: transparent;
   outline: none;
   border: none;

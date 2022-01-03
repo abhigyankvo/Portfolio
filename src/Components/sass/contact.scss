@@ -1,0 +1,137 @@
+@import "Util";
+
+#contact-container-wraper {
+  padding: 0 10vw;
+  background-color: $primary;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 768px) {
+    padding: 0 5vw;
+  }
+}
+#contact-container {
+  width: 75vw;
+  min-height: 60vh;
+  background-color: $primary-dark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 768px) {
+    width: 80vw;
+  }
+}
+#contact {
+  width: 60vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3fr 1fr 1fr;
+  grid-template-areas:
+    "alpha beta"
+    "gamma beta"
+    "delta beta";
+  @media (max-width: 768px) {
+    width: 75vw;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "alpha alpha"
+      "beta beta"
+      "gamma ."
+      "delta .";
+  }
+  > * {
+    padding: 0.5rem;
+    // border: 1px solid rgb(211, 127, 127);
+  }
+}
+#contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, max-content);
+  column-gap: 5%;
+  grid-template-areas:
+    "one two"
+    "three three"
+    "four .";
+  > * {
+    // border: 1px solid gold;
+    margin-bottom: 5%;
+    @media (max-width: 768px) {
+      margin-bottom: 8%;
+    }
+  }
+  input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid white;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    letter-spacing: 1px;
+    font-weight: 200;
+    @media (max-width: 768px) {
+      padding: 0.3rem 0.3rem 0.3rem 0;
+    }
+  }
+  input:focus {
+    border-bottom: 2px solid $accent;
+    color: $accent;
+  }
+  div:focus-within label {
+    color: $accent;
+  }
+  button {
+    letter-spacing: 1px;
+    color: $accent;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid $accent;
+    background-color: transparent;
+    border-radius: 2rem;
+  }
+  button:hover {
+    background-color: $accent;
+    color: $primary-dark;
+    cursor: pointer;
+  }
+}
+#contact-call {
+  grid-area: alpha;
+}
+#contact-form {
+  align-self: center;
+  grid-area: beta;
+}
+#contact-details {
+  grid-area: gamma;
+}
+#contact-icons {
+  // border: 1px solid red;
+  align-self: center;
+  grid-area: delta;
+  > * {
+    fill: rgba(255, 255, 255, 0.74);
+    // border: 1px solid red;
+    margin-right: 3%;
+  }
+  @media (max-width: 768px) {
+    > * {
+      margin-right: 5%;
+    }
+    align-self: end;
+  }
+}
+
+#contact-name {
+  grid-area: one;
+}
+#contact-email {
+  grid-area: two;
+}
+#contact-message {
+  grid-area: three;
+}
+#contact-submit {
+  grid-area: four;
+}

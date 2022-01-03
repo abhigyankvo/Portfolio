@@ -1,20 +1,42 @@
 @import "Util";
 #intro-container {
-  height: 500px;
+  min-height: 60vh;
   background-color: $primary-dark;
-  padding: 50px 10vw 0 10vw;
+  padding: 0 10vw;
   text-align: center;
-
-  #intro-content {
-    font-weight: lighter;
-    margin: 30px auto 0 auto;
-    width: 50vw;
+  position: relative;
+  > div {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   #intro-title {
-    display: inline;
-    margin-left: 50vw;
-    font-size: 5rem;
-    font-weight: 600;
-    opacity: 0.05;
+    @include titleBig;
+    position: absolute;
+    left: 60%;
+    top: 10%;
+    @media (max-width: 768px) {
+      @include titleSmall;
+      left: 50%;
+      top: 2%;
+    }
+  }
+  #intro-heading {
+    // @include h1Big;
+    margin-bottom: 2rem;
+    // @media (max-width: 768px) {
+    //   @include h1Small;
+    // }
+  }
+  #intro-content {
+    @include pBig;
+    font-weight: lighter;
+    width: 60vw;
+    @media (max-width: 768px) {
+      @include pSmall;
+      width: 100%;
+    }
   }
 }

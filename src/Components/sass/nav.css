@@ -17,21 +17,17 @@ li {
           align-items: center;
 }
 
-#nav-contact {
-  margin-left: auto;
+#nav-container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#logo {
-  margin-right: 15vw;
-  font-size: 1.3rem;
+#nav-links > * {
+  margin-left: 2vw;
 }
 
-#logo span {
-  font-weight: 600;
-}
-
-#nav-links *,
-#nav-contact * {
-  margin-left: 2.3vw;
+#nav-contact > * {
+  margin-right: 2vw;
 }
 /*# sourceMappingURL=nav.css.map */

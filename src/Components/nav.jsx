@@ -10,10 +10,18 @@ export function Nav() {
         <span>Abhigyan</span> Verma
       </li>
       <ul className="nav" id="nav-links">
-        <li>About</li>
-        <li>Projects</li>
-        <li>Articles</li>
-        <li>Contact</li>
+        <li>
+          <a href="">About</a>
+        </li>
+        <li>
+          <a href="">About</a>
+        </li>
+        <li>
+          <a href="">About</a>
+        </li>
+        <li>
+          <a href="">About</a>
+        </li>
       </ul>
       <ul className="nav" id="nav-contact">
         <Linkedin />
