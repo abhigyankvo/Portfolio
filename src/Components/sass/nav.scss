@@ -22,3 +22,9 @@ li {
     margin-right: 2vw;
   }
 }
+@media (max-width: 768px) {
+  #nav-links,
+  #nav-contact {
+    display: none;
+  }
+}
