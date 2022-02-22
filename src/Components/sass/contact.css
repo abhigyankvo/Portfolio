@@ -1,5 +1,5 @@
 #contact-container-wraper {
-  padding: 0 10vw;
+  position: relative;
   background-color: #2d2e32;
   height: 100vh;
   display: -webkit-box;
@@ -161,7 +161,6 @@
 }
 
 #contact-icons > * {
-  fill: rgba(255, 255, 255, 0.74);
   margin-right: 3%;
 }
 
@@ -199,5 +198,26 @@
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: four;
+}
+
+#contact-container-wraper::before {
+  content: "Contact";
+  position: absolute;
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.089);
+  top: 150px;
+  left: 8vw;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+@media (max-width: 768px) {
+  #contact-container-wraper::before {
+    letter-spacing: 2px;
+    font-size: 2rem;
+    font-weight: 400;
+  }
 }
 /*# sourceMappingURL=contact.css.map */

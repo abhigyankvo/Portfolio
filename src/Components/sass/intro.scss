@@ -1,29 +1,17 @@
 @import "Util";
 #intro-container {
-  min-height: 60vh;
-  background-color: $primary-dark;
-  padding: 0 10vw;
-  text-align: center;
   position: relative;
-  > div {
-    min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-dark;
+  #intro {
+    width: 60vw;
   }
-  #intro-title {
-    @include titleBig;
-    position: absolute;
-    left: 60%;
-    top: 10%;
-    @media (max-width: 768px) {
-      @include titleSmall;
-      left: 50%;
-      top: 2%;
-    }
-  }
+
   #intro-heading {
+    text-align: center;
     // @include h1Big;
     margin-bottom: 2rem;
     // @media (max-width: 768px) {
@@ -31,12 +19,29 @@
     // }
   }
   #intro-content {
+    text-align: center;
     @include pBig;
     font-weight: lighter;
-    width: 60vw;
     @media (max-width: 768px) {
       @include pSmall;
       width: 100%;
     }
   }
 }
+
+#intro-container::before {
+  content: "About";
+  @include sectionTitle;
+}
+
+// .title {
+//   @include titleBig;
+//   position: absolute;
+//   left: 60%;
+//   top: 10%;
+//   @media (max-width: 768px) {
+//     @include titleSmall;
+//     left: 50%;
+//     top: 2%;
+//   }
+// }

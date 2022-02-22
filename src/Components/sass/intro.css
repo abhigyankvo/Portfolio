@@ -1,59 +1,33 @@
 #intro-container {
-  min-height: 60vh;
-  background-color: #25262a;
-  padding: 0 10vw;
-  text-align: center;
   position: relative;
-}
-
-#intro-container > div {
-  min-height: 60vh;
+  min-height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #25262a;
 }
 
-#intro-container #intro-title {
-  letter-spacing: 2px;
-  font-size: 5rem;
-  font-weight: 600;
-  opacity: 0.05;
-  position: absolute;
-  left: 60%;
-  top: 10%;
-}
-
-@media (max-width: 768px) {
-  #intro-container #intro-title {
-    letter-spacing: 1px;
-    font-size: 3rem;
-    font-weight: 600;
-    opacity: 0.05;
-    left: 50%;
-    top: 2%;
-  }
+#intro-container #intro {
+  width: 60vw;
 }
 
 #intro-container #intro-heading {
+  text-align: center;
   margin-bottom: 2rem;
 }
 
 #intro-container #intro-content {
+  text-align: center;
   letter-spacing: 1px;
   font-size: 1rem;
   font-weight: 200;
   font-weight: lighter;
-  width: 60vw;
 }
 
 @media (max-width: 768px) {
@@ -62,6 +36,27 @@
     font-size: 0.8rem;
     font-weight: 200;
     width: 100%;
+  }
+}
+
+#intro-container::before {
+  content: "About";
+  position: absolute;
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.089);
+  top: 150px;
+  left: 8vw;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+@media (max-width: 768px) {
+  #intro-container::before {
+    letter-spacing: 2px;
+    font-size: 2rem;
+    font-weight: 400;
   }
 }
 /*# sourceMappingURL=intro.css.map */

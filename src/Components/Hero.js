@@ -1,5 +1,6 @@
 import "./sass/hero.css";
 import { Nav } from "./Nav";
+import { Link } from "react-scroll";
 function Hero() {
   return (
     <div id="hero-container">
@@ -9,7 +10,16 @@ function Hero() {
           <h1 id="hero-heading">
             Making ideas into <span>Reality.</span>
           </h1>
-          <button id="btn-works">My Works</button>
+          <Link
+            activeClass="active"
+            to="intro-container"
+            spy={true}
+            smooth={true}
+            duration={400}
+          >
+            <button id="btn-works">My Works</button>
+          </Link>
+
           <button id="btn-resume">Resume</button>
         </div>
       </div>

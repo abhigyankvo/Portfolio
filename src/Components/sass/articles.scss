@@ -1,7 +1,8 @@
 @import "Util";
 
 #articles-container-wrapper {
-  padding: 10vh 10vw;
+  // padding: 10vh 10vw;
+  position: relative;
   background-color: $primary-dark;
   @media (max-width: 768px) {
     padding: 5vh 5vw;
@@ -11,7 +12,7 @@
   background-color: $primary;
   width: 70vw;
   min-height: 20vw;
-  margin: 0 auto 10vh auto;
+  margin: 80px auto;
   display: flex;
   #articles-left {
     // border: 1px solid red;
@@ -19,7 +20,8 @@
     @include pBig;
     margin: auto;
     .article-list {
-      // border: 1px solid yellow;
+      // border: 1px solid red;
+      position: relative;
       width: 100%;
       height: 60px;
       display: flex;
@@ -30,13 +32,9 @@
       }
     }
     #selected {
-      border-left: 5px solid $accent;
+      // border-left: 5px solid $accent;
       color: $accent;
       font-weight: 400;
-      @media (max-width: 768px) {
-        border-left: none;
-        border-bottom: 3px solid $accent;
-      }
     }
   }
   #articles-right {
@@ -78,7 +76,7 @@
     }
   }
 
-  #react {
+  .tech {
     max-height: 120px;
     min-height: 80px;
     height: 6vw;
@@ -92,3 +90,25 @@
     }
   }
 }
+.underline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: $accent;
+  @media (max-width: 768px) {
+    top: 100%;
+    height: 1.5px;
+    width: 100%;
+  }
+}
+#articles-container-wrapper::before {
+  content: "Articles";
+  @include sectionTitle;
+}
+
+// #articles-container-wrapper::before {
+//   content: "Articles";
+//   @include sectionTitle;
+// }

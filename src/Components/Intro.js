@@ -4,9 +4,9 @@ import { ReactComponent as Node } from "../svg/Node.svg";
 import { ReactComponent as Grpc } from "../svg/Grpc.svg";
 export function Intro() {
   return (
-    <div id="intro-container">
-      <p id="intro-title">About</p>
-      <div>
+    <div className="wrapper" id="intro-container">
+      {/* <p className="title">About</p> */}
+      <div id="intro">
         <h1 id="intro-heading">Hi, I’m Abhigyan. Nice to meet you.</h1>
         <p id="intro-content">
           I did my UG from NIT Jalandhar. Since the beginning, I have a great
@@ -17,10 +17,6 @@ export function Intro() {
           chops one problem at a time.
         </p>
       </div>
-
-      {/* <React id="hello" />
-      <Node />
-      <Grpc /> */}
     </div>
   );
 }

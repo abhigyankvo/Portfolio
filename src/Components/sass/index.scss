@@ -24,6 +24,12 @@ h1 {
     @include h1Small;
   }
 }
+h2 {
+  @include h2Big;
+  @media (max-width: 768px) {
+    @include h2Small;
+  }
+}
 
 p,
 label {
@@ -31,4 +37,11 @@ label {
   @media (max-width: 768px) {
     @include pSmall;
   }
+}
+a {
+  text-decoration: none;
+}
+.wrapper {
+  border: 0.1px solid transparent;
+  padding: 0 10vw;
 }

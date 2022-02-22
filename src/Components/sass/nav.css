@@ -1,40 +1,80 @@
-li {
-  list-style: none;
-}
-
-#nav-container,
-#nav-links,
-#nav-contact {
+#nav-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-#nav-container {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+#nav-container #nav-links,
+#nav-container .nav-contacts {
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-weight: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-#nav-links > * {
+#nav-container #nav-links > *,
+#nav-container .nav-contacts > * {
   margin-left: 2vw;
 }
 
-#nav-contact > * {
-  margin-right: 2vw;
+.link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  height: 40px;
 }
 
-@media (max-width: 768px) {
-  #nav-links,
-  #nav-contact {
-    display: none;
-  }
+.link:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.link:hover > * {
+  color: #64f4ac;
+}
+
+.icon {
+  fill: rgba(255, 255, 255, 0.74);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  fill: #64f4ac;
+  cursor: pointer;
+}
+
+#mobile-nav-links {
+  border: 1px solid red;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.hide {
+  display: none;
 }
 /*# sourceMappingURL=nav.css.map */

@@ -3,8 +3,11 @@ import { ReactComponent as Mail } from "../svg/mail.svg";
 import { ReactComponent as Linkedin } from "../svg/linkedin.svg";
 import { ReactComponent as Github } from "../svg/github.svg";
 export function Contact() {
+  const openLink = (event) => {
+    window.open(event);
+  };
   return (
-    <div id="contact-container-wraper">
+    <div className="wrapper" id="contact-container-wraper">
       <div id="contact-container">
         <div id="contact">
           <div id="contact-call">
@@ -16,8 +19,18 @@ export function Contact() {
             <p id="p-mail">abhigyankvo@gmail.com</p>
           </div>
           <div id="contact-icons">
-            <Linkedin />
-            <Github />
+            <Linkedin
+              onClick={() => {
+                openLink(
+                  "https://www.linkedin.com/in/abhigyan-kumar-verma-5815491b4/"
+                );
+              }}
+            />
+            <Github
+              onClick={() => {
+                openLink("https://github.com/abhigyankvo");
+              }}
+            />
             <Mail />
           </div>
 

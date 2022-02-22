@@ -37,7 +37,7 @@ $primary-dark: #25262a;
 }
 @mixin titleBig {
   letter-spacing: 2px;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 600;
   opacity: 0.05;
 }
@@ -83,4 +83,18 @@ $primary-dark: #25262a;
   border: none;
   border-bottom: 0.125rem solid $accent;
   color: $accent;
+}
+@mixin sectionTitle {
+  position: absolute;
+  // @include h1Big();
+  font-size: 2.5rem;
+  @media (max-width: 768px) {
+    @include h1Big();
+  }
+  color: rgba(255, 255, 255, 0.089);
+  top: 150px;
+  left: 8vw;
+
+  transform-origin: bottom left;
+  transform: rotate(-90deg);
 }

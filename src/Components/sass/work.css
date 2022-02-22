@@ -1,5 +1,5 @@
 #work-container-wrapper {
-  padding: 10vh 10vw;
+  position: relative;
   background-color: #2d2e32;
 }
 
@@ -16,7 +16,7 @@
   width: max-content;
   min-height: 25vw;
   padding: 3rem;
-  margin: 50px auto;
+  margin: 80px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,16 +88,6 @@
   }
   #work #work-heading {
     display: none;
-  }
-  #work h1 {
-    letter-spacing: 1px;
-    font-size: 1rem;
-    font-weight: 400;
-  }
-  #work p {
-    letter-spacing: 1px;
-    font-size: 0.8rem;
-    font-weight: 200;
   }
   #work > * {
     margin: 5px 0;
@@ -189,5 +179,26 @@
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: delta;
+}
+
+#work-container-wrapper::before {
+  content: "Projects";
+  position: absolute;
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.089);
+  top: 150px;
+  left: 8vw;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+@media (max-width: 768px) {
+  #work-container-wrapper::before {
+    letter-spacing: 2px;
+    font-size: 2rem;
+    font-weight: 400;
+  }
 }
 /*# sourceMappingURL=work.css.map */
